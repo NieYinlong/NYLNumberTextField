@@ -17,6 +17,7 @@
 		F58C45B2249CB0A200D691E6 /* NYLNumberTextFieldTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F58C45B1249CB0A200D691E6 /* NYLNumberTextFieldTests.m */; };
 		F58C45BD249CB0A200D691E6 /* NYLNumberTextFieldUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = F58C45BC249CB0A200D691E6 /* NYLNumberTextFieldUITests.m */; };
 		F58C45D7249CB28200D691E6 /* NYLNumberTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = F58C45D4249CB28200D691E6 /* NYLNumberTextField.m */; };
+		F58C45D9249CC04200D691E6 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = F58C45D8249CC04200D691E6 /* README.md */; };
 		FBD0819099361380FFB1E7FF /* libPods-NYLNumberTextField.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 09DF6EFEAFBA936FFF2842E1 /* libPods-NYLNumberTextField.a */; };
 /* End PBXBuildFile section */
 
@@ -61,6 +62,7 @@
 		F58C45BE249CB0A200D691E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F58C45D2249CB28200D691E6 /* NYLNumberTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NYLNumberTextField.h; sourceTree = "<group>"; };
 		F58C45D4249CB28200D691E6 /* NYLNumberTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NYLNumberTextField.m; sourceTree = "<group>"; };
+		F58C45D8249CC04200D691E6 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 		F58C4589249CB09E00D691E6 = {
 			isa = PBXGroup;
 			children = (
+				F58C45D8249CC04200D691E6 /* README.md */,
 				F58C4594249CB09E00D691E6 /* NYLNumberTextField */,
 				F58C45B0249CB0A200D691E6 /* NYLNumberTextFieldTests */,
 				F58C45BB249CB0A200D691E6 /* NYLNumberTextFieldUITests */,
@@ -280,6 +283,7 @@
 			files = (
 				F58C45A5249CB0A200D691E6 /* LaunchScreen.storyboard in Resources */,
 				F58C45A2249CB0A100D691E6 /* Assets.xcassets in Resources */,
+				F58C45D9249CC04200D691E6 /* README.md in Resources */,
 				F58C45A0249CB09E00D691E6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

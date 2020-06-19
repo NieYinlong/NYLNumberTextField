@@ -7,12 +7,32 @@
 
 # 如何使用
 引入```NYLNumberTextField```头文件
+
+##### 例1: 小数点保留两位小数
 ```js
  NYLNumberTextField *textField_1 = [[NYLNumberTextField alloc] init];
  textField_1.placeholder = @"小数点输入, 保留两位小数(例如金额输入)";
  textField_1.canInputDecimal = YES; // 是否可输入小数点
  textField_1.keepDecimalPlacesLength = 2; // 保留两位小数
  [self.view addSubview:textField_1];
+```
+
+##### 例2: 小数点输入,小数点之前限制4位, 保留两位小数
+```swift
+ textField.keepDecimalPlacesLength = 2;
+ textField.beforeDecimalMaxLength = 4;
+```
+
+##### 例3: 不能以0开头的纯数字, 限制3位(例如年龄)
+```swift
+textField.canHaveHeadZero = NO;
+textField.maxLength = 3;
+```
+##### 例4: 任意数字输入 
+```swift
+NYLNumberTextField *textField_4 = [[NYLNumberTextField alloc] init];
+textField_4.placeholder = @"任意纯数字输入, 不带小数点";
+[self.view addSubview:textField_4];
 ```
 
 # 源代码
