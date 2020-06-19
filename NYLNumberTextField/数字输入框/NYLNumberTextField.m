@@ -1,58 +1,3 @@
-# 先看效果
-![图片](https://img-blog.csdnimg.cn/20200619165659170.gif#pic_center)
-# 开发背景
-项目开发中经常用到数字输入框，例如输入金额（小数点之前最多几位， 保留几位小数）、年龄（开头不能为0）、纯数字、这些都需要单独在 
-```- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range```代理方法中判断，比较麻烦，为了不重复造轮子， 单位封装出来了一个通用数字输入框控件。NYLNumberTextField 继承自UITextField，在本类中加入各种属性，来满足各种数字输入需求。
-
-
-# 如何使用
-引入```NYLNumberTextField```头文件
-```js
- NYLNumberTextField *textField_1 = [[NYLNumberTextField alloc] init];
- textField_1.placeholder = @"小数点输入, 保留两位小数(例如金额输入)";
- textField_1.canInputDecimal = YES; // 是否可输入小数点
- textField_1.keepDecimalPlacesLength = 2; // 保留两位小数
- [self.view addSubview:textField_1];
-```
-
-# 源代码
-###### NYLNumberTextField.h
-```swift
-//
-//  NYLNumberTextField.h
-//  NYL_UnitTest
-//
-//  Created by 聂银龙 on 2020/6/19.
-//  Copyright © 2020 聂银龙. All rights reserved.
-//
-
-#import <UIKit/UIKit.h>
-
-NS_ASSUME_NONNULL_BEGIN
-
-@interface NYLNumberTextField : UITextField<UITextFieldDelegate>
-
-/// 无小数点的情况下限制输入数字的长度,  默认很大
-@property (nonatomic, assign) NSInteger maxLength;
-/// 不可输入小数点的情况下, 首位是否可为0, 默认YES
-@property (nonatomic, assign, getter=isCanHaveHeadZero) BOOL canHaveHeadZero;
-/// 是否可输入小数点, 默认NO
-@property (nonatomic, assign, getter=isCanInputDecimal) BOOL canInputDecimal;
-/// 保留几位小数, 默认2
-@property (nonatomic, assign) NSInteger keepDecimalPlacesLength;
-/// 小数点之前最多几位, 默认很大
-@property (nonatomic, assign) NSInteger beforeDecimalMaxLength;
-/// 是否可编辑, 默认YES
-@property (nonatomic, assign, getter=isCanEdit) BOOL canEdit;
-
-@end
-
-NS_ASSUME_NONNULL_END
-
-```
-
-######  NYLNumberTextField.m
-```swift
 //
 //  NYLNumberTextField.m
 //  NYL_UnitTest
@@ -155,5 +100,3 @@ static NSString * const NYL_NORMAL_NUMBER = @"0123456789\n";
 }
 
 @end
-
-```
